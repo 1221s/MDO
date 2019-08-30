@@ -1,0 +1,112 @@
+// VARIABLES:
+// Fonts:
+$fontSurabanglus: "Surabanglus", serif;
+$fontCaslon: "Caslon Antique", serif;
+$fontNoto: "noto serif", serif;
+$fontJenson: "Jenson", serif;
+
+// Colors:
+$black: #000000;
+$darkGrey: #232323;
+$goldColor: #d1b750;
+
+// journey colors
+$magikerFarve: #8d434c;
+$quidditchStjerneFarve: #d5cb13;
+$vogterFarve: #4a728c;
+$alkymistFarve: #347f41;
+$erfarenMagikerFarve: #db873c;
+
+// general numbers:
+$vw100: 100vw;
+$vh100: 100vh;
+$vh150: 150vh;
+$percent100: 100%;
+$bgSize90: 90%;
+
+// Font-sizes:
+
+$semiBigText: 20pt;
+
+// layers:
+$overTopLayer: 6;
+$topLayer: 5;
+$regLayerTop: 3;
+$regLayer: 2;
+$regLayerBottom: 1;
+$lowerLayer: 0;
+$backgroundLayer: -2;
+
+// MIXINS:
+
+@mixin bgImage($imageURL, $noRepeat: "no-repeat", $positionCenter: "center") {
+  background-image: $imageURL;
+  background-repeat: $noRepeat;
+  background-position: $positionCenter;
+}
+
+@mixin transformRotate($rotate) {
+  -webkit-transform: $rotate;
+  -moz-transform: $rotate;
+  -o-transform: $rotate;
+  transform: $rotate;
+}
+
+@mixin easeInOut($easeinout) {
+  -webkit-transition: $easeinout;
+  -moz-transition: $easeinout;
+  -o-transition: $easeinout;
+  transition: $easeinout;
+}
+
+@mixin transformLeftCenter($leftCenter: "left center") {
+  -webkit-transform-origin: $leftCenter;
+  -moz-transform-origin: $leftCenter;
+  -o-transform-origin: $leftCenter;
+  transform-origin: $leftCenter;
+}
+
+@mixin boxShadowOpacity($opacity) {
+  -webkit-box-shadow: $opacity;
+  -moz-box-shadow: $opacity;
+  box-shadow: $opacity;
+}
+
+// Various bg images:
+
+// front page:
+$loginPaperBg: url("../img/loginPaper.png");
+
+// Retninger:
+$magikerBgImg: url("../img/badges/magiker/magikerBadge.png");
+$alkymistBgImg: url("../img/badges/alkymist/alkymistBadge.png");
+$vogterBgImg: url("../img/badges/drage/drageBadge.png");
+$quidditchBgImg: url("../img/badges/quidditch/qBadge.png");
+$eMagikerBgImg: url("../img/badges/erfaren/erfarenBadge.png");
+
+// Badges
+
+$badge1bgImg: url("../img/badges/magiker/wandBadge.png");
+$badge2bgImg: url("../img/badges/magiker/capeBadge.png");
+$badge3bgImg: url("../img/badges/magiker/nordheimBadge.png");
+$badge4bgImg: url("../img/badges/magiker/ghostBadge.png");
+
+$badge5bgImg: url("../img/badges/alkymist/eliksirBadge.png");
+$badge6bgImg: url("../img/badges/alkymist/spiswandBadge.png");
+$badge7bgImg: url("../img/badges/alkymist/botanikBadge.png");
+$badge8bgImg: url("../img/badges/alkymist/creatureBadge.png");
+
+$badge9bgImg: url("../img/badges/quidditch/quidditchBadge.png");
+$badge10bgImg: url("../img/badges/quidditch/qtournamentBadge.png");
+$badge11bgImg: url("../img/badges/quidditch/snitchBadge.png");
+$badge13bgImg: url("../img/badges/quidditch/broomBadge.png");
+
+$badge14bgImg: url("../img/badges/drage/eggBadge.png");
+$badge15bgImg: url("../img/badges/drage/animalBadge.png");
+$badge16bgImg: url("../img/badges/drage/dragonBadge.png");
+$badge17bgImg: url("../img/badges/drage/zooBadge.png");
+
+$badge18bgImg: url("../img/badges/erfaren/toadBadge.png");
+$badge19bgImg: url("../img/badges/erfaren/stormsBadge.png");
+$badge20bgImg: url("../img/badges/erfaren/concertBadge.png");
+$badge21bgImg: url("../img/badges/erfaren/promBadge.png");

@@ -1,0 +1,164 @@
+.badgeReceived {
+  position: relative;
+  margin: auto;
+  width: 80vw;
+  text-align: center;
+  overflow: visible;
+
+  .badgeReceivedMsg {
+    position: relative;
+    margin: auto;
+    width: 100%;
+
+    .badgeReceivedImage {
+      width: 60vw;
+      height: auto;
+      margin-left: -10vw;
+    }
+
+    .retningMsg {
+      margin-top: 50px;
+    }
+  }
+
+  .journeyProgress {
+    width: 70vw;
+    height: 20px;
+    position: relative;
+    margin-top: 30px;
+  }
+
+  .progressBar {
+    width: 100%;
+    height: 20px;
+    background-color: darkslategrey;
+    border-radius: 20px;
+    overflow: hidden;
+
+    .progress {
+      text-align: right;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      color: white;
+      height: 100%;
+      transition-duration: 2.5s;
+    }
+
+    .progressColorMagiker {
+      background-color: $magikerFarve;
+    }
+
+    .progressColorQuidditch {
+      background-color: $quidditchStjerneFarve;
+    }
+
+    .progressColorVogter {
+      background-color: $vogterFarve;
+    }
+
+    .progressColorAlkymist {
+      background-color: $alkymistFarve;
+    }
+
+    .progressColorErfaren {
+      background-color: $erfarenMagikerFarve;
+    }
+
+    .progress25 {
+      width: 25%;
+    }
+    .progress50 {
+      width: 50%;
+    }
+    .progress75 {
+      width: 75%;
+    }
+    .progress100 {
+      width: 100%;
+    }
+  }
+  .badgeIcon {
+    height: 30px;
+    width: 30px;
+    border: 3px solid black;
+    background-color: black;
+    border-radius: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    margin-top: -28px;
+    z-index: $regLayer;
+  }
+
+  .badgeIcon5 {
+    left: 60%;
+    width: 100px;
+    height: 100px;
+    margin-top: 100px;
+    transform: rotate(20deg);
+    z-index: $regLayerBottom;
+  }
+
+  // Background-images for various badges, tied to ID:
+  .badge0 {
+    background-image: $badge1bgImg;
+  }
+  .badge1 {
+    background-image: $badge2bgImg;
+  }
+  .badge2 {
+    background-image: $badge3bgImg;
+  }
+  .badge3 {
+    background-image: $badge4bgImg;
+  }
+  .badge4 {
+    background-image: $badge5bgImg;
+  }
+  .badge5 {
+    background-image: $badge6bgImg;
+  }
+  .badge6 {
+    background-image: $badge7bgImg;
+  }
+  .badge7 {
+    background-image: $badge8bgImg;
+  }
+  .badge8 {
+    background-image: $badge9bgImg;
+  }
+  .badge9 {
+    background-image: $badge10bgImg;
+  }
+  .badge10 {
+    background-image: $badge11bgImg;
+  }
+  .badge12 {
+    background-image: $badge13bgImg;
+  }
+  .badge13 {
+    background-image: $badge14bgImg;
+  }
+  .badge14 {
+    background-image: $badge15bgImg;
+  }
+  .badge15 {
+    background-image: $badge16bgImg;
+  }
+  .badge16 {
+    background-image: $badge17bgImg;
+  }
+  .badge17 {
+    background-image: $badge18bgImg;
+  }
+  .badge18 {
+    background-image: $badge19bgImg;
+  }
+  .badge19 {
+    background-image: $badge20bgImg;
+  }
+  .badge20 {
+    background-image: $badge21bgImg;
+  }
+}

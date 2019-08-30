@@ -1,0 +1,75 @@
+/* I HID SOMETHING IN YOUR HEADER IM SORRY IF YOU EVER SEE THIS */
+.hidden {
+  display: none;
+}
+
+/*Section 1: General css, end*/
+
+/*resets margin and padding to 0 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: $vh100;
+  width: $vw100;
+  overflow: hidden;
+  margin-top: 0;
+}
+
+body {
+  height: $percent100;
+  width: $percent100;
+  max-height: $vh100;
+  max-width: $vh100;
+  min-width: $vw100;
+  overflow: hidden;
+}
+
+section {
+  height: $percent100;
+  width: $percent100;
+  margin: auto;
+  overflow: hidden;
+}
+
+.mainsection {
+  position: absolute;
+  width: $vw100;
+  height: $vh100;
+  right: 0;
+  top: 10vh;
+  z-index: $regLayer;
+}
+
+.mainsectionImg {
+  min-width: $percent100;
+  max-width: 108vw;
+  height: 105%;
+  position: absolute;
+  top: -5px;
+  left: 0;
+  z-index: $backgroundLayer;
+}
+
+.loginBg {
+  height: $percent100;
+  width: $percent100;
+  max-width: $vw100;
+  max-height: $vh100;
+
+  @include bgImage(url("../../img/login.jpg"));
+  background-size: cover;
+}
+
+.baseBg {
+  height: $vh100;
+  width: 120%;
+  max-width: 120%;
+  max-height: $vh100;
+
+  @include bgImage(url("../../img/background.jpg"));
+  background-size: 150% 100%;
+}
+/*Section 1: General css, end*/

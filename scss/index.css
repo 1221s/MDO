@@ -1,0 +1,2196 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*Section 2: Header and nav, start*/
+/*Section 2.1: Burgermenu, start*/
+#nav-icon {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 20%;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  z-index: 6;
+}
+
+#nav-icon span {
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+#nav-icon span :nth-child(1) {
+  top: 0px;
+  -webkit-transform-origin: "left center";
+  transform-origin: "left center";
+}
+
+#nav-icon span :nth-child(2) {
+  top: 10px;
+  -webkit-transform-origin: "left center";
+  transform-origin: "left center";
+}
+
+#nav-icon span :nth-child(3) {
+  top: 20px;
+  -webkit-transform-origin: "left center";
+  transform-origin: "left center";
+}
+
+#nav-icon .open span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: -3px;
+  left: 8px;
+}
+
+#nav-icon .open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+#nav-icon .open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 26px;
+  left: 8px;
+}
+
+.menuSpan {
+  background: black;
+}
+
+#nav-icon span:nth-child(1) {
+  top: 0px;
+  -webkit-transform-origin: "left center";
+  transform-origin: "left center";
+}
+
+#nav-icon span:nth-child(2) {
+  top: 10px;
+  -webkit-transform-origin: "left center";
+  transform-origin: "left center";
+}
+
+#nav-icon span:nth-child(3) {
+  top: 20px;
+  -webkit-transform-origin: "left center";
+  transform-origin: "left center";
+}
+
+#nav-icon.open span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: -3px;
+  left: 8px;
+}
+
+#nav-icon.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+#nav-icon.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 26px;
+  left: 8px;
+}
+
+/*Section 2.1: Burgermenu, end*/
+/*Section 2.2 Header, start*/
+.logoHeader,
+.desktopHeader {
+  position: absolute;
+  width: 100%;
+  margin: auto;
+  top: 20%;
+  text-align: center;
+  margin-left: -15px;
+  margin-top: -10px;
+  z-index: 5;
+}
+
+.logoHeader .custom-logo,
+.desktopHeader .custom-logo {
+  width: 110px;
+  height: 70px;
+  display: block;
+  margin: auto;
+}
+
+.header {
+  width: 90vw;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  padding: 15px 20px 0px 20px;
+  z-index: 5;
+}
+
+.header .headerMenu {
+  position: relative;
+  width: 20%;
+  text-align: right;
+  z-index: 6;
+  float: right;
+}
+
+.header .headerMenu a {
+  text-decoration: none;
+  color: #000000;
+  max-width: 200px;
+}
+
+.header .headerMenu ul li {
+  list-style-type: none;
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  top: 30%;
+  font-family: "Surabanglus", serif;
+  font-size: 25px;
+}
+
+/*Section 2.2: Header*/
+/*Section 2.3: Sidenav, start*/
+.sidenav {
+  height: 100%;
+  max-width: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #232323;
+  overflow-x: hidden;
+  padding-top: 110px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  text-align: center;
+  z-index: 6;
+  /* The navigation menu links */
+}
+
+.sidenav a,
+.sidenav p {
+  padding: 8px;
+  padding-left: 0px;
+  text-decoration: none;
+  font-family: "Surabanglus", serif;
+  font-size: 20px;
+  color: #cccc66;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  letter-spacing: 2px;
+}
+
+.sidenav p {
+  padding-bottom: 0;
+}
+
+.fab,
+.fa-facebook-square {
+  color: white;
+  font-size: 90px;
+  text-align: center;
+  margin-top: 10%;
+}
+
+.websiteLinks {
+  margin-bottom: 20px;
+}
+
+.appLinks {
+  margin-bottom: 20px;
+}
+
+/*Section 2.3: Burgermenu, end*/
+/*Section 2: Header and nav, end*/
+/*Section 3: Footer, start*/
+footer {
+  position: fixed;
+  width: 100vw;
+  max-width: 100vw;
+  height: 20vh;
+  bottom: -50px;
+  z-index: 3;
+  overflow: hidden;
+}
+
+.menu-footermenu-container {
+  position: absolute;
+  bottom: 55px;
+  width: 100vw;
+  z-index: 3;
+}
+
+footer ul {
+  list-style: none;
+}
+
+#menu-item-29 {
+  border: 1px solid black;
+  border-style: hidden solid hidden solid;
+}
+
+.footerMenu ul span {
+  display: none;
+}
+
+.menu-footerMenu-container {
+  text-align: center;
+}
+
+.menu-footerMenu {
+  text-align: center;
+}
+
+.menu-footermenu-container li {
+  float: left;
+  width: 33vw;
+  text-align: center;
+}
+
+.menu-footermenu-container a {
+  color: #000000;
+  font-size: 2.5em;
+  text-decoration: none;
+}
+
+.menu-footermenu-container span {
+  display: none;
+}
+
+.footerMenu-bg {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+
+/*Section 3: Footer, end*/
+/* I HID SOMETHING IN YOUR HEADER IM SORRY IF YOU EVER SEE THIS */
+.hidden {
+  display: none;
+}
+
+/*Section 1: General css, end*/
+/*resets margin and padding to 0 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  margin-top: 0;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  max-height: 100vh;
+  max-width: 100vh;
+  min-width: 100vw;
+  overflow: hidden;
+}
+
+section {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.mainsection {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  right: 0;
+  top: 10vh;
+  z-index: 2;
+}
+
+.mainsectionImg {
+  min-width: 100%;
+  max-width: 108vw;
+  height: 105%;
+  position: absolute;
+  top: -5px;
+  left: 0;
+  z-index: -2;
+}
+
+.loginBg {
+  height: 100%;
+  width: 100%;
+  max-width: 100vw;
+  max-height: 100vh;
+  background-image: url("../../img/login.jpg");
+  background-repeat: "no-repeat";
+  background-position: "center";
+  background-size: cover;
+}
+
+.baseBg {
+  height: 100vh;
+  width: 120%;
+  max-width: 120%;
+  max-height: 100vh;
+  background-image: url("../../img/background.jpg");
+  background-repeat: "no-repeat";
+  background-position: "center";
+  background-size: 150% 100%;
+}
+
+/*Section 1: General css, end*/
+.mapdiv text {
+  cursor: pointer;
+}
+
+#mobile-svg {
+  height: 100vh;
+  width: 100vw;
+}
+
+/*Section 9.1: Event peekaboo, start*/
+#peekabooWrapper {
+  height: 100vh;
+  width: 100vw;
+  z-index: 3;
+}
+
+#peekaboo {
+  position: absolute;
+  top: 65%;
+  left: -15%;
+  width: 120%;
+  height: 120%;
+  padding: 10px 40px;
+  background-image: url("../img/loginPaper.png");
+  background-repeat: no-repeat;
+  background-size: 120% 70%;
+  -webkit-transition: 1s;
+  transition: 1s;
+  z-index: 3;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+#peekaboo .peekabooHeaderBox {
+  position: absolute;
+  width: 30%;
+  max-height: 30px;
+  top: 40px;
+  margin-left: 15%;
+}
+
+#peekaboo .peekabooHeaderBox h2 {
+  font-size: 20px;
+  font-family: "Surabanglus", serif;
+}
+
+#peekaboo .peekabooHeaderBox h2::first-letter {
+  font-size: 30px;
+}
+
+#peekaboo .peekabooHeaderBox i {
+  float: left;
+  font-size: 20px;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.mainEventTitles {
+  display: none;
+}
+
+.eventlat,
+.eventlng,
+.standaloneTitle,
+.standaloneId {
+  display: none;
+}
+
+#eventList {
+  position: absolute;
+  padding: 20% 5%;
+  max-width: 60%;
+  display: block;
+  font-family: "Surabanglus", serif;
+  font-size: 1em;
+  list-style-type: none;
+}
+
+#eventList li {
+  background-image: url("../img/locationPoint.png");
+  background-repeat: no-repeat;
+  background-size: 30px 40px;
+  padding-left: 12px;
+  padding-bottom: 10px;
+  word-spacing: 10px;
+}
+
+/*Section 9.1: Peekaboo, end*/
+#leafletMap {
+  position: absolute !important;
+  top: 5vh;
+  height: 80vh;
+  width: 100vw;
+  background-color: #8d434c;
+  border: solid 10px #8d434c;
+  border-width: 10px 0 0 0;
+  z-index: 1;
+}
+
+/*Section 9.2 Event Lightbox, start*/
+.modal {
+  background: url("../img/lightboxPaper.png") no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  margin: auto;
+  z-index: 5;
+  /* Sit on top */
+  /*padding-top: 50%; /* Location of the box */
+  top: 15%;
+  width: 100vw;
+  /* Full width */
+  height: 70vh;
+  /* Full height */
+  /*background-color: rgb(0,0,0); /* Fallback color */
+  /*background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  font-family: "Surabanglus", serif;
+}
+
+.modalContent {
+  position: relative;
+  width: 100%;
+}
+
+.eTitle {
+  font-size: 1.5em;
+  margin-top: 10%;
+  text-align: center;
+  width: 100%;
+  line-height: 150%;
+}
+
+.close {
+  position: absolute;
+  top: -15%;
+  right: 20px;
+  color: #232323;
+  font-size: 60px;
+  font-weight: bold;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.eventDescription p {
+  font-family: "noto serif", serif;
+  font-size: 1em;
+  color: #232323;
+  width: 75%;
+  margin: auto;
+  line-height: 1.3;
+  max-height: 150px;
+  overflow: auto;
+}
+
+.badgeDescription p {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #232323;
+  line-height: 1;
+  width: 60%;
+  margin-left: 13.5%;
+}
+
+.badgeDescription .curvedArrow {
+  display: inline-block;
+  width: 60px;
+  height: 40px;
+  padding-left: 50%;
+}
+
+.eventBadgeImgContainer {
+  border: solid #cdb172 3px;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.39);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.39);
+  z-index: 6;
+  width: 110px;
+  height: 110px;
+  position: absolute;
+  bottom: 1%;
+  right: 0;
+}
+
+.badgeDescription .eventBadgeImg {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.badgeRetning {
+  font-family: "Surabanglus", serif;
+  font-size: 20pt;
+  font-weight: 700;
+  text-align: center;
+}
+
+.badgeKortLink {
+  font-size: 15pt;
+  font-family: "noto serif", serif;
+  width: 80%;
+  margin-left: 13.6%;
+}
+
+.badgeKortLink a {
+  color: black;
+}
+
+.badgeLightboxImg {
+  width: 50%;
+  max-width: 180px;
+  height: auto;
+  min-height: 180px;
+  top: 250px;
+  left: 25%;
+}
+
+#darkoverlay {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  display: none;
+}
+
+/*Section 9.2: Event Lightbox, end*/
+/*Section 9: Kort, end*/
+/*Section 5: Login, start*/
+#loginPaper {
+  width: 90%;
+  height: 100%;
+  right: 10%;
+  top: 15%;
+  position: relative;
+  opacity: 1;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transform: rotate(15deg);
+  transform: rotate(15deg);
+}
+
+.logInForm {
+  position: absolute;
+  display: block;
+  width: 60%;
+  height: 100%;
+  top: 2%;
+  left: 20%;
+  overflow: hidden;
+}
+
+.logInForm input {
+  width: 50vw;
+  min-height: 35px;
+  margin-bottom: 20px;
+  border: 1px solid #000000;
+  border-style: none none solid none;
+  background-color: rgba(255, 0, 0, 0);
+  padding: 10px;
+  padding-bottom: 1px;
+  overflow: visible;
+  font-family: "Surabanglus", serif;
+  font-size: 1.2em;
+}
+
+.logInForm .submitBtnLogin {
+  border-style: none;
+  font-size: 2em;
+}
+
+.logInForm ::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-family: "Surabanglus", serif;
+  font-size: 1em;
+}
+
+.logInForm :-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-family: "Surabanglus", serif;
+  font-size: 1em;
+}
+
+.logInForm ::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-family: "Surabanglus", serif;
+  font-size: 1em;
+}
+
+.logInForm ::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-family: "Surabanglus", serif;
+  font-size: 1em;
+}
+
+#mPassword {
+  font-family: Arial;
+}
+
+.loginPaperBG {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: -10%;
+}
+
+.waxseal {
+  width: 55%;
+  height: auto;
+  top: 35%;
+  left: 20%;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/*Section 5: Login, end*/
+/*Section 6: Optagelsesbrev, start*/
+/*Section 6.1: Optagelse, start*/
+#konvolutLoginSkærm {
+  width: 100vw;
+  height: auto;
+  max-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.konvolutLoginSkærmImg {
+  position: absolute;
+  display: block;
+  width: 120%;
+  height: auto;
+  top: 65vh;
+  left: 10%;
+  -webkit-transform: rotate(-25deg);
+  transform: rotate(-25deg);
+}
+
+.startDinRejseWrapper {
+  position: absolute;
+  top: 65vh;
+  left: 5vw;
+  width: 50%;
+  display: none;
+}
+
+.startDinRejseWrapper img {
+  max-width: 45px;
+  height: auto;
+  float: right;
+  margin-top: -25px;
+}
+
+.startDinRejseWrapper :first-child {
+  display: block;
+  float: none;
+  margin-bottom: 5px;
+}
+
+.startDinRejseWrapper span {
+  color: black;
+  float: left;
+  font-size: 20pt;
+  font-weight: bold;
+}
+
+/*Section 6.1: Optagelse, end*/
+/*Section 6.2: Konvolut, start*/
+#envelopeOprettelse {
+  position: fixed;
+  margin: 50px auto 0;
+  width: 150px;
+  height: 90px;
+  bottom: 5vh;
+  right: 10vw;
+  background: #c94548;
+  border-radius: 0 0 5px 5px;
+  -webkit-box-shadow: 0 0 1px #c94548 inset;
+          box-shadow: 0 0 1px #c94548 inset;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+#envelopeOprettelse::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-width: 45px 76px;
+  -webkit-transition-duration: inherit;
+          transition-duration: inherit;
+  border-bottom-color: #c94548;
+  top: -100%;
+  left: 0px;
+}
+
+#envelopeOprettelse::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-width: 45px 76px;
+  -webkit-transition-duration: inherit;
+          transition-duration: inherit;
+  border-right-color: #ed4c50;
+  border-left-color: #fa565a;
+  border-bottom-color: #fa565a;
+  top: 0;
+  border-radius: 0 0 5px 5px;
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.paper {
+  width: 100%;
+  height: 86px;
+  margin: 0 auto;
+  border-radius: 5px;
+  position: absolute;
+  top: -33px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  background-image: url("../img/loginPaper.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: darken;
+  background-size: cover;
+  -webkit-transition-duration: inherit;
+          transition-duration: inherit;
+}
+
+.paper .jumper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: black;
+  font-size: 20px;
+  font-family: "Surabanglus", serif;
+}
+
+/*Envelope animation*/
+.openEnvelope {
+  -webkit-animation: openEnvelope;
+          animation: openEnvelope;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.openEnvelopePaper {
+  height: 96px;
+  -webkit-animation: paperUnfold;
+          animation: paperUnfold;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+#initialPaperContent {
+  font-size: 18px;
+  font-family: "Caslon Antique", serif;
+  padding: 10px 15px;
+  text-align: center;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+/* when you first click the envelope,
+first size up and go to center, then go down past the screen */
+@-webkit-keyframes openEnvelope {
+  0% {
+    bottom: 5vh;
+    right: 10vw;
+  }
+  20% {
+    bottom: 5vh;
+    right: 32vw;
+  }
+  100% {
+    bottom: -30vh;
+    right: 32vw;
+  }
+}
+@keyframes openEnvelope {
+  0% {
+    bottom: 5vh;
+    right: 10vw;
+  }
+  20% {
+    bottom: 5vh;
+    right: 32vw;
+  }
+  100% {
+    bottom: -30vh;
+    right: 32vw;
+  }
+}
+
+@-webkit-keyframes paperUnfold {
+  0% {
+    width: 90%;
+    height: 96px;
+    left: 6px;
+    top: -33px;
+  }
+  100% {
+    width: 110vw;
+    height: 70vh;
+    left: -34vw;
+    top: -70vh;
+  }
+}
+
+@keyframes paperUnfold {
+  0% {
+    width: 90%;
+    height: 96px;
+    left: 6px;
+    top: -33px;
+  }
+  100% {
+    width: 110vw;
+    height: 70vh;
+    left: -34vw;
+    top: -70vh;
+  }
+}
+
+/*Section 6.2: Konvolut, end*/
+/*Section 6.3: Optagelsespapir, start*/
+#paperContent {
+  opacity: 0;
+  display: none;
+  width: 100%;
+  height: 60%;
+  min-height: 60%;
+  max-height: 60%;
+  overflow: hidden;
+  padding: 20px 20px 20px 40px;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+#paperContent h2 {
+  color: #000000;
+  font-family: "Surabanglus", serif;
+  font-size: 1em;
+  text-align: center;
+}
+
+#paperContent p {
+  width: 100%;
+  color: #000000;
+  font-family: "verdana", serif;
+  font-size: 1em;
+}
+
+#paperContent .slick-next,
+#paperContent .slick-prev {
+  position: absolute;
+  top: 80%;
+}
+
+#paperContent .slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style-type: none;
+}
+
+#paperContent .slick-dots button {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  padding: 0;
+  border: none;
+  border-radius: 100%;
+  background-color: blue;
+  text-indent: -999999px;
+}
+
+#paperContent .slick-dots li.slick-active button {
+  background-color: red;
+}
+
+.paperPage {
+  display: none;
+  position: absolute;
+  top: 0;
+  height: auto;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+#paperNextArrow,
+#paperBackArrow {
+  z-index: 100;
+  width: 10%;
+  height: auto;
+  position: fixed;
+  bottom: 5vh;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+#paperNextArrow {
+  right: 15vw;
+}
+
+#paperBackArrow {
+  left: 15vw;
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+}
+
+#paperOverlayOprettelse {
+  position: fixed;
+  right: -50vw;
+  width: 40%;
+  height: 50px;
+  bottom: 20vh;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+}
+
+#paperOverlayOprettelse img {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  position: absolute;
+  top: 0;
+}
+
+#paperOverlayOprettelse p {
+  position: absolute;
+  top: 150%;
+  left: 40px;
+  width: 100%;
+  height: 100%;
+}
+
+/*Section 6.3: Optagelsespapir, end*/
+/* 6.4 image scroller start */
+#paperImageScroller {
+  margin-top: 5vh;
+  width: 100vw;
+  height: 40vh;
+  text-align: center;
+  left: 100vw;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  background-color: #d1b750;
+  padding: 1vh 0 1vh 0;
+}
+
+#paperImageScroller .imageScrollerContainer {
+  display: block;
+  width: 100vw;
+  height: 37vh;
+}
+
+#paperImageScroller img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#lastSlidePaper {
+  width: 200px;
+  height: 150px;
+  max-width: 400px;
+  position: absolute;
+  right: -55vw;
+  top: 57vh;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+#lastSlidePaper img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+#lastSlidePaper p {
+  position: absolute;
+  font-family: "Surabanglus", serif;
+  top: 35%;
+  left: 25%;
+  font-size: 1.3em;
+}
+
+/* 6.4 image scroller end */
+/*Section 6: Optagelsebrev, end*/
+/*Section 11: Oprettelsesformular, start*/
+#createUserFormWrapper {
+  width: 100vw;
+  position: absolute;
+  top: 5%;
+  left: 0;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  font-family: Surabanglus, serif;
+  font-size: 15pt;
+  padding-top: 10%;
+  height: 65vh;
+}
+
+#createUserForm input,
+select {
+  font-family: Surabanglus, serif;
+  font-size: 12pt;
+  border-radius: 8px;
+  border: solid 1px #232323;
+  padding-left: 5px;
+}
+
+.elementContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 80vw;
+  margin: auto;
+}
+
+.elementContainer .elementChildLabel {
+  max-width: 45%;
+  min-width: 45%;
+  padding: 5px;
+}
+
+.elementContainer .elementChildLabel .elementChild {
+  position: absolute;
+  width: 50%;
+  height: auto;
+}
+
+.elementContainer .elementChildLabel .elementChild + img {
+  width: 90%;
+  height: auto;
+  max-width: 110%;
+  max-height: 50vw;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.elementContainer .elementChildLabel [type="radio"] {
+  opacity: 0;
+}
+
+.elementContainer .elementChildLabel [type="radio"]:checked + img {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  width: 110%;
+}
+
+.small-input {
+  width: 80px;
+}
+
+.large-input {
+  width: 160px;
+}
+
+select {
+  padding-bottom: 10px;
+  font-size: 12pt;
+}
+
+.small-select {
+  width: 87px;
+}
+
+.large-select {
+  width: 167px;
+}
+
+#createUserForm input:last-child {
+  border: none;
+}
+
+.formSection {
+  height: 55vh;
+  display: block;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.formSection h3 {
+  margin-bottom: 5%;
+  color: #232323;
+}
+
+.slickWrapper {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/registerPaper.png");
+  background-position: center;
+  background-size: 115% 110%;
+  background-repeat: repeat-x;
+  padding-top: 50px;
+}
+
+#btnWrapper {
+  z-index: 2;
+  position: absolute;
+  bottom: 15%;
+  width: 100vw;
+  text-align: center;
+}
+
+.btnslide {
+  display: inline;
+}
+
+.btnslide:first-child {
+  margin-right: 25%;
+}
+
+#slide-prev {
+  background-image: url("../img/arrows/arrowgoldLeft.png");
+  background-size: 100% 100%;
+  display: inline-block;
+  height: 30px;
+  width: 50px;
+  opacity: 0.4;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#slide-next {
+  background-image: url("../img/arrows/arrowgoldRight.png");
+  background-size: 100% 100%;
+  display: inline-block;
+  height: 30px;
+  width: 50px;
+  opacity: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#submit,
+#submitChanges {
+  background-image: url("../img/registerPaper.png");
+  background-size: 100% 100%;
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  height: 100px;
+  width: 150px;
+  opacity: 1;
+  display: block;
+  position: absolute;
+  right: -250px;
+  top: 60vh;
+  z-index: 6;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  display: block;
+  padding: 6px 12px;
+  margin-top: -35px;
+  z-index: 3;
+}
+
+.formPortraitWrapper {
+  width: 50vw;
+  max-width: 500px;
+  height: 50vw;
+  border-radius: 100%;
+  background-color: black;
+  border: 2px black solid;
+  overflow: hidden;
+  left: 22%;
+  z-index: 1;
+  margin: auto;
+}
+
+.formPortraitWrapper img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.fa-camera {
+  font-size: 50px;
+  color: #d1b751;
+  width: 87px;
+  height: 60px;
+  padding-top: 10px;
+  border-radius: 8px;
+  background-color: #8e4b55;
+}
+
+.oprettelseArrow {
+  position: absolute;
+  top: 105% !important;
+  max-width: 20%;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+/*Section 11: Oprettelsesformular, end*/
+/*Section 4: Magiker visual, start*/
+#profileImgContainer {
+  width: 100%;
+}
+
+.ribbonContainer {
+  position: relative;
+  text-align: center;
+}
+
+#ribbonContainer {
+  position: relative;
+  text-align: center;
+  top: 0;
+}
+
+#profileImg {
+  width: 280px;
+  height: 280px;
+  border-radius: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  position: relative;
+  top: 50px;
+  overflow: hidden;
+}
+
+#profileImg img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+}
+
+.ribbon {
+  width: 280px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -30px;
+  display: block;
+}
+
+.magicalName {
+  font-family: "Surabanglus", serif;
+  font-size: 20px;
+  color: #000000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#listOfBadges {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1em;
+}
+
+.badges {
+  display: inline-block;
+  margin: 0 0.4em;
+}
+
+#journeyName {
+  font-family: "Surabanglus", serif;
+  font-size: 20px;
+  color: #000000;
+  text-align: center;
+}
+
+#otherInfo {
+  font-family: "Surabanglus", serif;
+  font-size: 18px;
+  color: #000000;
+  margin-left: 15%;
+  margin-top: 1em;
+}
+
+#listOfInfo {
+  list-style-type: none;
+  position: relative;
+}
+
+#listOfInfo li {
+  color: #000000;
+  font-family: "Surabanglus", serif;
+  font-size: 18px;
+  margin-left: 250px;
+}
+
+#listOfInfo li:before {
+  content: attr(data-label);
+  position: absolute;
+  left: 15%;
+}
+
+#settingsIcon {
+  z-index: 1000;
+  position: relative;
+  left: 20%;
+  top: -10px;
+  min-width: 100px;
+  min-height: 100px;
+}
+
+#settingsIcon i {
+  font-size: 1.5em;
+  color: #000000;
+}
+
+.magikerIld {
+  border: solid 10px red;
+}
+
+.magikerJord {
+  border: solid 10px green;
+}
+
+.magikerVand {
+  border: solid 10px blue;
+}
+
+.magikerLuft {
+  border: solid 10px grey;
+}
+
+/*Section 4: Magiker visual, end*/
+/* section 2.4: qr-code-reader, start */
+/* the upload button */
+.qrcode-text-btn {
+  display: inline-block;
+  height: 2.5em;
+  width: 2.5em;
+  background: url(../img/qrcode-solid.svg) 50% 50% no-repeat;
+  cursor: pointer;
+  z-index: 6;
+}
+
+.qrcode-text-btn > input[type="file"] {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+/* section 2.4 qr-code-reader, end */
+.badgeReceived {
+  position: relative;
+  margin: auto;
+  width: 80vw;
+  text-align: center;
+  overflow: visible;
+}
+
+.badgeReceived .badgeReceivedMsg {
+  position: relative;
+  margin: auto;
+  width: 100%;
+}
+
+.badgeReceived .badgeReceivedMsg .badgeReceivedImage {
+  width: 60vw;
+  height: auto;
+  margin-left: -10vw;
+}
+
+.badgeReceived .badgeReceivedMsg .retningMsg {
+  margin-top: 50px;
+}
+
+.badgeReceived .journeyProgress {
+  width: 70vw;
+  height: 20px;
+  position: relative;
+  margin-top: 30px;
+}
+
+.badgeReceived .progressBar {
+  width: 100%;
+  height: 20px;
+  background-color: darkslategrey;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.badgeReceived .progressBar .progress {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  height: 100%;
+  -webkit-transition-duration: 2.5s;
+          transition-duration: 2.5s;
+}
+
+.badgeReceived .progressBar .progressColorMagiker {
+  background-color: #8d434c;
+}
+
+.badgeReceived .progressBar .progressColorQuidditch {
+  background-color: #d5cb13;
+}
+
+.badgeReceived .progressBar .progressColorVogter {
+  background-color: #4a728c;
+}
+
+.badgeReceived .progressBar .progressColorAlkymist {
+  background-color: #347f41;
+}
+
+.badgeReceived .progressBar .progressColorErfaren {
+  background-color: #db873c;
+}
+
+.badgeReceived .progressBar .progress25 {
+  width: 25%;
+}
+
+.badgeReceived .progressBar .progress50 {
+  width: 50%;
+}
+
+.badgeReceived .progressBar .progress75 {
+  width: 75%;
+}
+
+.badgeReceived .progressBar .progress100 {
+  width: 100%;
+}
+
+.badgeReceived .badgeIcon {
+  height: 30px;
+  width: 30px;
+  border: 3px solid black;
+  background-color: black;
+  border-radius: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  margin-top: -28px;
+  z-index: 2;
+}
+
+.badgeReceived .badgeIcon5 {
+  left: 60%;
+  width: 100px;
+  height: 100px;
+  margin-top: 100px;
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+  z-index: 1;
+}
+
+.badgeReceived .badge0 {
+  background-image: url("../img/badges/magiker/wandBadge.png");
+}
+
+.badgeReceived .badge1 {
+  background-image: url("../img/badges/magiker/capeBadge.png");
+}
+
+.badgeReceived .badge2 {
+  background-image: url("../img/badges/magiker/nordheimBadge.png");
+}
+
+.badgeReceived .badge3 {
+  background-image: url("../img/badges/magiker/ghostBadge.png");
+}
+
+.badgeReceived .badge4 {
+  background-image: url("../img/badges/alkymist/eliksirBadge.png");
+}
+
+.badgeReceived .badge5 {
+  background-image: url("../img/badges/alkymist/spiswandBadge.png");
+}
+
+.badgeReceived .badge6 {
+  background-image: url("../img/badges/alkymist/botanikBadge.png");
+}
+
+.badgeReceived .badge7 {
+  background-image: url("../img/badges/alkymist/creatureBadge.png");
+}
+
+.badgeReceived .badge8 {
+  background-image: url("../img/badges/quidditch/quidditchBadge.png");
+}
+
+.badgeReceived .badge9 {
+  background-image: url("../img/badges/quidditch/qtournamentBadge.png");
+}
+
+.badgeReceived .badge10 {
+  background-image: url("../img/badges/quidditch/snitchBadge.png");
+}
+
+.badgeReceived .badge12 {
+  background-image: url("../img/badges/quidditch/broomBadge.png");
+}
+
+.badgeReceived .badge13 {
+  background-image: url("../img/badges/drage/eggBadge.png");
+}
+
+.badgeReceived .badge14 {
+  background-image: url("../img/badges/drage/animalBadge.png");
+}
+
+.badgeReceived .badge15 {
+  background-image: url("../img/badges/drage/dragonBadge.png");
+}
+
+.badgeReceived .badge16 {
+  background-image: url("../img/badges/drage/zooBadge.png");
+}
+
+.badgeReceived .badge17 {
+  background-image: url("../img/badges/erfaren/toadBadge.png");
+}
+
+.badgeReceived .badge18 {
+  background-image: url("../img/badges/erfaren/stormsBadge.png");
+}
+
+.badgeReceived .badge19 {
+  background-image: url("../img/badges/erfaren/concertBadge.png");
+}
+
+.badgeReceived .badge20 {
+  background-image: url("../img/badges/erfaren/promBadge.png");
+}
+
+/*Section 8: Retning, start*/
+.journeySection {
+  width: 100%;
+  height: 80%;
+  background: url("../img/journeyIllustration.png") no-repeat center;
+  background-size: 100% 70%;
+  position: absolute;
+  top: 5%;
+}
+
+.jBadgeContainer {
+  position: relative;
+  width: 95%;
+  height: 360px;
+  top: 15%;
+  display: block;
+  margin: auto;
+}
+
+.jBadge {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  border: solid #cdb172 5 px;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.39);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.39);
+  z-index: 20;
+}
+
+.jBadgeImg {
+  border: none;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#magikerBadge {
+  top: 0;
+  left: 0;
+}
+
+#alkymistBadge {
+  bottom: 0;
+  right: 0;
+}
+
+#quidditchBadge {
+  top: 0;
+  right: 0;
+}
+
+#drageBadge {
+  bottom: 0;
+  left: 0;
+}
+
+#erfarenBadge {
+  top: 45%;
+  left: 34%;
+}
+
+#erfarenBadgeImg {
+  opacity: 1;
+}
+
+#jLock {
+  width: 40px;
+  height: 40px;
+  margin-right: auto;
+  margin-left: 30%;
+  margin-top: -50%;
+  display: none;
+  position: relative;
+  opacity: 1;
+  z-index: 100;
+}
+
+.jBadgeImg {
+  position: absolute;
+}
+
+.jRibbonContainer {
+  position: relative;
+  text-align: center;
+  width: 95%;
+  padding-right: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.jRibbon {
+  width: 100%;
+  height: 30px;
+  margin-right: auto;
+  padding-top: 90%;
+  display: block;
+  position: relative;
+  margin-left: 2%;
+}
+
+.journeyName {
+  font-family: Surabanglus, serif;
+  font-size: 10pt;
+  color: #232323;
+  position: absolute;
+  margin-top: 40%;
+  z-index: 2;
+  padding-left: 5%;
+}
+
+/*Section 8: Retning, end*/
+/*Section 10: Badges, start*/
+.badgeIndex {
+  margin-top: 30%;
+}
+
+.badgeContainer {
+  width: 100vw;
+  height: 100%;
+  position: relative;
+}
+
+.badge {
+  position: relative;
+  height: 60vh;
+  width: 100%;
+}
+
+.badgeActualImg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.5;
+}
+
+.badgeAcquired {
+  opacity: 1;
+}
+
+.badgeImg {
+  border: none;
+  width: 90px;
+  height: 90px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.64);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.64);
+  border: solid #e1d7c2 2px;
+  border-radius: 100%;
+  position: absolute;
+  opacity: 1;
+  background-color: white;
+}
+
+#magiker {
+  background: url("../img/badges/magiker/magikerIllustration.png") no-repeat;
+  background-size: 90%;
+  background-position: center;
+}
+
+#alkymist {
+  background: url("../img/badges/alkymist/alkymistIllustration.png") no-repeat;
+  background-size: 90%;
+  background-position: center;
+}
+
+#quidditch {
+  background: url("../img/badges/quidditch/quidditchIllustration.png") no-repeat;
+  background-size: 90%;
+  background-position: center;
+}
+
+#dragetaemmer {
+  background: url("../img/badges/drage/drageIllustration.png") no-repeat;
+  background-size: 90%;
+  background-position: center;
+}
+
+#erfaren {
+  background: url("../img/badges/erfaren/erfarenIllustration.png") no-repeat;
+  background-size: 90%;
+  background-position: center;
+}
+
+.journeyBadge {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  border-radius: 100%;
+  border: solid 3px #e1d7c2;
+}
+
+#welcome {
+  font-family: Surabanglus, serif;
+  font-size: 12pt;
+  color: #232323;
+  margin-bottom: 8%;
+  text-align: center;
+}
+
+.slick-next {
+  right: 20%;
+}
+
+.slick-prev {
+  left: 20%;
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 55%;
+  z-index: 89;
+  max-width: 15vw;
+}
+
+.top-left {
+  top: 10%;
+  left: 10%;
+}
+
+.top-right {
+  top: 10%;
+  right: 10%;
+}
+
+.bottom-left {
+  bottom: 10%;
+  left: 10%;
+}
+
+.bottom-right {
+  bottom: 10%;
+  right: 10%;
+}
+
+/*Section 10: Badges, end*/
+/*Section 9.2 Event Lightbox, start*/
+.modal {
+  background: url("../img/lightboxPaper.png") no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  margin: auto;
+  z-index: 15000;
+  /* Sit on top */
+  /*padding-top: 50%; /* Location of the box */
+  top: 15%;
+  width: 100vw;
+  /* Full width */
+  height: 70vh;
+  /* Full height */
+  /*background-color: rgb(0,0,0); /* Fallback color */
+  /*background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  font-family: Surabanglus, serif;
+}
+
+.modalContent {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.eTitle {
+  font-size: 1.5em;
+  margin-top: 10%;
+  text-align: center;
+  width: 100%;
+  line-height: 150%;
+}
+
+.close {
+  position: absolute;
+  top: -15%;
+  right: 20px;
+  color: #232323;
+  font-size: 60px;
+  font-weight: bold;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.eventDescription p {
+  font-family: "Noto Serif", serif;
+  font-size: 1em;
+  color: #232323;
+  width: 75%;
+  margin: auto;
+  line-height: 1.3;
+  max-height: 150px;
+  overflow: auto;
+}
+
+.badgeDescription p {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #232323;
+  line-height: 1;
+  width: 60%;
+  margin-left: 13.5%;
+}
+
+.badgeDescription .curvedArrow {
+  display: inline-block;
+  width: 60px;
+  height: 40px;
+  padding-left: 50%;
+}
+
+.eventBadgeImgContainer {
+  border: solid #cdb172 3px;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.39);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.39);
+  z-index: 100;
+  width: 110px;
+  height: 110px;
+  position: absolute;
+  bottom: 1%;
+  right: 0;
+}
+
+.badgeDescription .eventBadgeImg {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.badgeRetning {
+  font-family: "surabanglus", serif;
+  font-size: 20pt;
+  font-weight: 700;
+  text-align: center;
+}
+
+.badgeKortLink {
+  font-size: 15pt;
+  font-family: "noto serif", serif;
+  width: 80%;
+  margin-left: 13.6%;
+}
+
+.badgeKortLink a {
+  color: black;
+}
+
+.badgeLightboxImg {
+  width: 50%;
+  max-width: 180px;
+  height: auto;
+  min-height: 180px;
+  top: 250px;
+  left: 25%;
+}
+
+#darkoverlay {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  z-index: 90;
+  top: 0;
+  display: none;
+}
+
+/*Section 9.2: Event Lightbox, end*/
+.golden-qr {
+  display: none;
+}
+
+.golden-burger span {
+  background-color: #d1b750;
+}
+
+/*KEEP AT BOTTOM*/
+/* Section 13: Dektop Media Queries, start
+KEEP AT BOTTOM */
+.desktopHeader {
+  display: none;
+}
+
+.desktopMainSection {
+  display: none;
+}
+
+.desktopBottomLinks {
+  display: none;
+}
+
+.darkOverlay {
+  display: none;
+}
+
+@media only screen and (min-width: 1000px) {
+  #nav-icon {
+    display: none;
+  }
+  #mySidenav {
+    display: none;
+  }
+  .headerMenu {
+    display: none;
+  }
+  .logoHeader {
+    display: none;
+  }
+  .mainsection {
+    display: none;
+  }
+  .desktopHeader {
+    display: block;
+    width: 15%;
+    margin: auto;
+  }
+  .desktopHeaderLogo {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .desktopMainSection {
+    display: block;
+    position: relative;
+    width: 100vw;
+    margin: auto;
+    z-index: 10;
+    margin-top: 25vh;
+    text-align: center;
+  }
+  .desktopMainSection h1, .desktopMainSection h3 {
+    color: #d6c159;
+    font-family: "Surabanglus", serif;
+  }
+  .desktopMainSection img {
+    height: 30vh;
+    margin-top: 25px;
+    border-radius: 20px;
+  }
+  .desktopBottomLinks {
+    display: block;
+    width: 100vw;
+    height: 200px;
+    position: absolute;
+    top: 90vh;
+    text-align: center;
+    z-index: 10;
+  }
+  .desktopBottomLinks span:nth-child(1), .desktopBottomLinks span:nth-child(2) {
+    margin-right: 30px;
+  }
+  .desktopBottomLinks span a {
+    font-family: "Surabanglus", serif;
+    color: white;
+  }
+  .darkOverlay {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+}
+
+/*Section 13: Desktop Media Queries, end*/
+/*# sourceMappingURL=index.css.map */

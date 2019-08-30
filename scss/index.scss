@@ -1,0 +1,25 @@
+// Reset the base css:
+@import "partials/reset";
+
+// Variables and mixins:
+@import "partials/utils";
+
+// Styling:
+@import "partials/header";
+@import "partials/footer";
+@import "partials/general";
+
+// stylesheets from features subfolder
+@import "partials/features/map";
+@import "partials/features/kort";
+@import "partials/features/login";
+@import "partials/features/optagelse";
+@import "partials/features/profil";
+@import "partials/features/qr";
+@import "partials/features/badgeReceived";
+@import "partials/features/badges";
+
+@import "partials/features/goldenIcons";
+
+/*KEEP AT BOTTOM*/
+@import "partials/desktop";

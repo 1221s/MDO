@@ -1,0 +1,10 @@
+.golden-qr {
+  //   background: url(../img/qrcode-gold.svg) 50% 50% no-repeat;
+  display: none;
+}
+
+.golden-burger {
+  span {
+    background-color: $goldColor;
+  }
+}
