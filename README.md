@@ -1,2 +1,1 @@
-# MDO
-magiske dage app
+# MagikerensRejse
